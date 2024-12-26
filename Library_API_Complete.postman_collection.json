@@ -1,0 +1,270 @@
+{
+  "info": {
+    "name": "Library API - Complete",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "Create Author",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Author Name\",\n  \"email\": \"author@example.com\",\n  \"phoneNumber\": \"+1234567890\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/authors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors"]
+            }
+          }
+        },
+        {
+          "name": "Get All Authors",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/authors",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors"]
+            }
+          }
+        },
+        {
+          "name": "Update Author",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Author Name\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/authors/<id>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors", "<id>"]
+            }
+          }
+        },
+        {
+          "name": "Delete Author",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/authors/<id>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors", "<id>"]
+            }
+          }
+        },
+        {
+          "name": "Get Authors Exceeding Book Limit",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/authors/exceeding-limit",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["authors", "exceeding-limit"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Create Book",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Book Title\",\n  \"author\": \"<AuthorId>\",\n  \"isbn\": \"123-456-789\",\n  \"availableCopies\": 10\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            }
+          }
+        },
+        {
+          "name": "Get All Books",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            }
+          }
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Updated Book Title\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/books/<id>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "<id>"]
+            }
+          }
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/books/<id>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "<id>"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Borrowers",
+      "item": [
+        {
+          "name": "Create Borrower",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Borrower Name\",\n  \"membershipActive\": true,\n  \"membershipType\": \"Standard\",\n  \"borrowedBooks\": [],\n  \"overdueBooks\": []\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/borrowers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["borrowers"]
+            }
+          }
+        },
+        {
+          "name": "Get All Borrowers",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/borrowers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["borrowers"]
+            }
+          }
+        },
+        {
+          "name": "Update Borrower",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Borrower Name\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/borrowers/<id>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["borrowers", "<id>"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Borrow/Return",
+      "item": [
+        {
+          "name": "Borrow Book",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/borrow/<borrowerId>/<bookId>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["borrow", "<borrowerId>", "<bookId>"]
+            }
+          }
+        },
+        {
+          "name": "Return Book",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/return/<borrowerId>/<bookId>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["return", "<borrowerId>", "<bookId>"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
